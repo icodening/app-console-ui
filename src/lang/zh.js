@@ -8,11 +8,21 @@ module.exports = {
     "update": "编辑",
     "delete": "删除",
     "close": "关闭",
+    "save": "保存",
   },
   table: {
     option: "操作"
   },
   commons: {
+    "date": {
+      "YEAR": "年",
+      "MONTH": "月",
+      "DAY": "日",
+      "HOUR": "时",
+      "MINUTE": "分",
+      "SECOND": "秒",
+    },
+    "status": "当前状态",
     "keyword": "关键字",
     "search": "查询",
     "enabled": "启用",
@@ -46,7 +56,14 @@ module.exports = {
       "keyword": "请输入关键字"
     },
     modal: {
-      "title": "编辑限流规则"
+      "title": "编辑限流规则",
+      "scope": "作用范围",
+      "APPLICATION": "应用",
+      "INSTANCE": "实例",
+      "affectTarget": "影响目标",
+      "dimension": "时间维度",
+      "frequency": "限流次数",
+      "endpoint": "限流端点",
     }
   }
 }

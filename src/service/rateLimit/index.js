@@ -9,17 +9,25 @@ class RateLimitService {
     });
   }
 
-  addRecord(queryObject) {
+  addRecord(record) {
     return request({
       url: '/ratelimit',
       method: 'post',
-      params: queryObject
+      data: record
+    });
+  }
+
+  editRecord(record) {
+    return request({
+      url: '/ratelimit',
+      method: 'put',
+      data: record
     });
   }
 
   deleteRecord(id) {
     return request({
-      url: '/ratelimit/'+id,
+      url: '/ratelimit/' + id,
       method: 'delete',
     });
   }
