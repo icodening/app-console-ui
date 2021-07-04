@@ -33,8 +33,7 @@
           <th>{{$t('rateLimit.table.scope')}}</th>
           <th>{{$t('rateLimit.table.affectTarget')}}</th>
           <th>{{$t('rateLimit.table.endpoint')}}</th>
-          <th>{{$t('rateLimit.table.frequency')}}</th>
-          <th>{{$t('rateLimit.table.dimension')}}</th>
+          <th>{{$t('rateLimit.table.rule')}}</th>
           <th>{{$t('rateLimit.table.enable')}}</th>
           <th>{{$t('rateLimit.table.createTime')}}</th>
           <th>{{$t('rateLimit.table.modifyTime')}}</th>
@@ -46,8 +45,7 @@
           <td>{{item.scope}}</td>
           <td>{{item.affectTarget}}</td>
           <td>{{item.endpoint}}</td>
-          <td>{{item.frequency}}</td>
-          <td>{{item.dimension}}</td>
+          <td>{{item.frequency}}{{$t('commons.unit.times')}} / {{convertDimension(item.dimension)}}</td>
           <td>
             <span :class="{'text-success':item.enable,'text-danger':!item.enable}">
                    {{item.enable? $t('commons.enabled'):$t('commons.disabled')}}
@@ -154,6 +152,9 @@
             that.queryRateLimits();
           })
         }
+      },
+      convertDimension(en) {
+        return this.$i18n.t('commons.date.' + en);
       }
     }
   }

@@ -3,7 +3,7 @@
     <ul class="nav flex-column">
       <li class="nav-item">
         <router-link v-for="route in routes" :key="route.path" :to="route.path"
-                     class="nav-link" active-class="active" exact>
+                     class="nav-link" active-class="active">
           {{$t('menu.' + route.name)}}
         </router-link>
       </li>
@@ -29,3 +29,29 @@
     },
   }
 </script>
+<style scoped>
+
+  .sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+  }
+
+  .sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #727272;
+  }
+
+  .sidebar .nav-link.active {
+    color: #007bff;
+  }
+
+  .sidebar .nav-link:hover .feather,
+  .sidebar .nav-link.active .feather {
+    color: inherit;
+  }
+
+  .sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+</style>

@@ -22,6 +22,9 @@ module.exports = {
       "MINUTE": "分",
       "SECOND": "秒",
     },
+    "unit": {
+      "times": "次"
+    },
     "status": "当前状态",
     "keyword": "关键字",
     "search": "查询",
@@ -36,6 +39,7 @@ module.exports = {
       "identity": "应用标识",
       "ip": "IP",
       "port": "端口",
+      "pid": "进程号",
     },
     input: {
       "keyword": "请输入应用名、实例标识、IP"
@@ -48,6 +52,7 @@ module.exports = {
       "endpoint": "影响端点",
       "frequency": "限流次数",
       "dimension": "时间纬度",
+      "rule": "限流规则",
       "enable": "当前状态",
       "createTime": "创建时间",
       "modifyTime": "上次修改",

@@ -26,6 +26,7 @@
           <th>{{$t('applicationOverview.table.identity')}}</th>
           <th>{{$t('applicationOverview.table.ip')}}</th>
           <th>{{$t('applicationOverview.table.port')}}</th>
+          <th>{{$t('applicationOverview.table.pid')}}</th>
         </tr>
         </thead>
         <tbody>
@@ -34,6 +35,7 @@
           <td>{{item.identity}}</td>
           <td>{{item.ip}}</td>
           <td>{{item.port}}</td>
+          <td>{{item.pid}}</td>
         </tr>
         </tbody>
       </table>
