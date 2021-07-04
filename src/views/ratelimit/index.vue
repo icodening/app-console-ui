@@ -105,7 +105,6 @@
         }
       },
       showModal(title, data, editFlag) {
-        const that = this;
         if (Object.keys(data).length === 0
           && data.constructor === Object) {
           data = {
@@ -118,14 +117,7 @@
         this.$refs.modal.modalToggle({
           title: title,
           data: data,
-          editFlag: editFlag,
-          saveFunction: () => {
-            if (editFlag) {
-              that.editRecord();
-            } else {
-              that.addRecord();
-            }
-          }
+          editFlag: editFlag
         });
       },
       queryRateLimits() {
