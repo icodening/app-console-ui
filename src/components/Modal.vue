@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="modal fade" id="editModal">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="staticBackdropLabel">{{modalOption.title}}</h5>
@@ -10,11 +10,12 @@
             </button>
           </div>
           <div class="modal-body">
-            <component :is="formViewName" v-bind:data="modalOption.data"></component>
+            <component :is="modalOption.viewName" v-bind:data="modalOption.data"></component>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{$t('button.close')}}</button>
-            <button type="button" class="btn btn-primary" data-dismiss="modal" @click="save">{{$t('button.save')}}
+            <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">{{$t('button.close')}}</button>
+            <button type="button" class="btn btn-primary btn-sm" v-if="modalOption.showSaveBtn" data-dismiss="modal"
+                    @click="save">{{$t('button.save')}}
             </button>
           </div>
         </div>
@@ -38,7 +39,9 @@
         modalOption: {
           title: "",
           data: {},
-          editFlag: false
+          viewName: "",
+          editFlag: false,
+          showSaveBtn: true
         },
         modalWindow: {}
       }
@@ -48,7 +51,13 @@
     },
     methods: {
       modalToggle(option) {
+        if (option.showSaveBtn === undefined) {
+            option.showSaveBtn = true;
+        }
         this.modalOption = option;
+        if (!this.modalOption.viewName) {
+          this.modalOption.viewName = this.formViewName;
+        }
         this.modalWindow.toggle();
       },
       save() {

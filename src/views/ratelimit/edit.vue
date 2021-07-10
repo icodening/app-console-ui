@@ -69,6 +69,7 @@
       }
     },
     mounted() {
+      this.entity = this.data;
     },
     methods: {},
     watch: {

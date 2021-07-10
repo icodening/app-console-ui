@@ -6,6 +6,7 @@ import router from './router'
 import VueI18n from 'vue-i18n'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 Vue.use(VueI18n)
 const i18n = new VueI18n({

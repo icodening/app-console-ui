@@ -16,6 +16,7 @@ export default new Router({
       path: '/instance',
       name: 'instanceList',
       component: Layout,
+      icon: "bi-app",
       children: [{
         path: '/instance',
         name: 'instanceList',
@@ -28,11 +29,25 @@ export default new Router({
       name: 'rateLimit',
       redirect: '/ratelimit',
       component: Layout,
+      icon: "bi-shield-slash",
       children: [{
         path: '/ratelimit',
         name: 'ratelimit',
         component: () =>
           import('@/views/ratelimit/index'),
+      }]
+    },
+    {
+      path: '/config',
+      name: 'config',
+      redirect: '/config',
+      component: Layout,
+      icon: "bi-app-indicator",
+      children: [{
+        path: '/config',
+        name: 'config',
+        component: () =>
+          import('@/views/config/index'),
       }]
     },
   ]
