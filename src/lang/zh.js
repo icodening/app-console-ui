@@ -42,10 +42,15 @@ module.exports = {
       "ip": "IP",
       "port": "端口",
       "pid": "进程号",
+      "viewLog": "查看日志"
     },
     input: {
       "keyword": "请输入应用名、实例标识、IP"
     }
+  },
+  log: {
+    title: "日志",
+    keyword: "请输入日志关键字"
   },
   rateLimit: {
     table: {

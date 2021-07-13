@@ -22,6 +22,11 @@ export default new Router({
         name: 'instanceList',
         component: () =>
           import('@/views/instance/index'),
+      }, {
+        path: '/instance/:id/log',
+        name: 'instanceLog',
+        component: () =>
+          import('@/views/instance/instanceLog'),
       }]
     },
     {

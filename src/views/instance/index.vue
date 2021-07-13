@@ -27,6 +27,7 @@
           <th>{{$t('applicationOverview.table.ip')}}</th>
           <th>{{$t('applicationOverview.table.port')}}</th>
           <th>{{$t('applicationOverview.table.pid')}}</th>
+          <th>{{$t('table.option')}}</th>
         </tr>
         </thead>
         <tbody>
@@ -36,6 +37,13 @@
           <td>{{item.ip}}</td>
           <td>{{item.port}}</td>
           <td>{{item.pid}}</td>
+          <td>
+            <div class="btn-group btn-group-sm" role="group">
+              <router-link class="btn btn btn-outline-success" :to="'/instance/'+item.id+'/log'">
+                {{$t('applicationOverview.table.viewLog')}}
+              </router-link>
+            </div>
+          </td>
         </tr>
         </tbody>
       </table>
