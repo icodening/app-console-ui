@@ -59,11 +59,22 @@
       let protocol = isSecure ? "wss://" : "ws://";
       let url = protocol + window.location.host + "/log/" + instanceId;
       let ws = new WebSocket(url);
+      let tmp = null;
       ws.onmessage = function (data) {
         if (data.data instanceof Blob) {
           let blob = data.data;
           blob.text().then(string => {
-            that.log = convert.toHtml(that.log + string);
+            //以换行标识完整数据包
+            if (string.charAt(string.length - 1) === "\n") {
+              if (tmp == null) {
+                that.log = convert.toHtml(that.log + string);
+              } else {
+                that.log = convert.toHtml(that.log + (tmp += string));
+                tmp = null;
+              }
+            } else {
+              tmp += string;
+            }
             logarea.scrollTop = logarea.scrollHeight + 100;
           })
         }
@@ -75,9 +86,7 @@
         console.debug(err)
       }
     },
-    methods: {
-
-    }
+    methods: {}
   }
 </script>
 
