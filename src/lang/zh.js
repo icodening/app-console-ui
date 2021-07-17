@@ -3,6 +3,7 @@ module.exports = {
     "instanceList": "应用概览",
     "rateLimit": "流量控制",
     "config": "动态配置",
+    "routerConfig": "路由配置",
   },
   button: {
     "add": "新增",
@@ -98,6 +99,39 @@ module.exports = {
       "INSTANCE": "实例",
       "affectTarget": "影响目标",
       "content": "配置内容",
+    }
+  },
+  routerConfig: {
+    name: "路由配置",
+    table: {
+      "scope": "作用范围",
+      "affectTarget": "影响目标",
+      "createTime": "创建时间",
+      "modifyTime": "上次修改",
+      "originService": "原调用服务",
+      "targetService": "目标调用服务",
+      "keyName": "Key名",
+      "matchType": "匹配方式",
+      "expression": "表达式",
+      "enable": "当前状态"
+    },
+    input: {
+      "keyword": "请输入关键字"
+    },
+    modal: {
+      "title": "编辑路由配置",
+      "scope": "作用范围",
+      "APPLICATION": "应用",
+      "INSTANCE": "实例",
+      "affectTarget": "影响目标",
+      "originService": "原始服务",
+      "targetService": "目标服务",
+      "keySource": "KEY源头",
+      "keyName": "KEY名",
+      "matchType": "匹配类型",
+      "equals": "精确匹配",
+      "regex": "正则匹配",
+      "expression": "表达式",
     }
   }
 }

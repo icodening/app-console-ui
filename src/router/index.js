@@ -55,5 +55,18 @@ export default new Router({
           import('@/views/config/index'),
       }]
     },
+    {
+      path: '/routerConfig',
+      name: 'routerConfig',
+      redirect: '/routerConfig',
+      component: Layout,
+      icon: "bi-compass",
+      children: [{
+        path: '/routerConfig',
+        name: 'routerConfig',
+        component: () =>
+          import('@/views/routerConfig/index'),
+      }]
+    },
   ]
 })
