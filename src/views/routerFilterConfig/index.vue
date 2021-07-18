@@ -43,7 +43,7 @@
           <th>{{$t('routerFilterConfig.table.serverInstanceSignature')}}</th>
           <th>{{$t('routerFilterConfig.table.enable')}}</th>
 <!--          <th>{{$t('routerFilterConfig.table.createTime')}}</th>-->
-<!--          <th>{{$t('routerFilterConfig.table.modifyTime')}}</th>-->
+          <th>{{$t('routerFilterConfig.table.modifyTime')}}</th>
           <th>{{$t('table.option')}}</th>
         </tr>
         </thead>
@@ -65,7 +65,7 @@
            </span>
           </td>
 <!--          <td>{{item.createTime | dateFormat}}</td>-->
-<!--          <td>{{item.modifyTime | dateFormat}}</td>-->
+          <td>{{item.modifyTime | dateFormat}}</td>
           <td>
             <div class="btn-group btn-group-sm" role="group">
               <button class="btn btn btn-outline-success"

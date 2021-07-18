@@ -40,7 +40,7 @@
           <th>{{$t('routerConfig.table.matchType')}}</th>
           <th>{{$t('routerConfig.table.expression')}}</th>
           <th>{{$t('routerConfig.table.enable')}}</th>
-          <th>{{$t('routerConfig.table.createTime')}}</th>
+<!--          <th>{{$t('routerConfig.table.createTime')}}</th>-->
           <th>{{$t('routerConfig.table.modifyTime')}}</th>
           <th>{{$t('table.option')}}</th>
         </tr>
@@ -60,7 +60,7 @@
                    {{item.enable? $t('commons.enabled'):$t('commons.disabled')}}
            </span>
           </td>
-          <td>{{item.createTime | dateFormat}}</td>
+<!--          <td>{{item.createTime | dateFormat}}</td>-->
           <td>{{item.modifyTime | dateFormat}}</td>
           <td>
             <div class="btn-group btn-group-sm" role="group">
