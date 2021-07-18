@@ -4,6 +4,7 @@ module.exports = {
     "rateLimit": "流量控制",
     "config": "动态配置",
     "routerConfig": "路由配置",
+    "routerFilterConfig": "路由过滤",
   },
   button: {
     "add": "新增",
@@ -35,6 +36,10 @@ module.exports = {
     "edit": "编辑",
     "delete": "删除",
     "detail": "详情"
+  },
+  configurableScope: {
+    "scope": "作用范围",
+    "affectTarget": "影响目标",
   },
   applicationOverview: {
     table: {
@@ -103,15 +108,19 @@ module.exports = {
   },
   routerConfig: {
     name: "路由配置",
+    tips: "提示：当请求中存在对应的值时则将改变调用的服务名不会改变资源标志符(URI), 可用于多版本应用的部分流量转发",
     table: {
       "scope": "作用范围",
-      "affectTarget": "影响目标",
+      "affectTarget": "应用名",
       "createTime": "创建时间",
       "modifyTime": "上次修改",
       "originService": "原调用服务",
       "targetService": "目标调用服务",
-      "keyName": "Key名",
+      "keySource": "参数源",
+      "keyName": "参数名",
       "matchType": "匹配方式",
+      "equals": "精确匹配",
+      "regex": "正则匹配",
       "expression": "表达式",
       "enable": "当前状态"
     },
@@ -126,12 +135,57 @@ module.exports = {
       "affectTarget": "影响目标",
       "originService": "原始服务",
       "targetService": "目标服务",
-      "keySource": "KEY源头",
-      "keyName": "KEY名",
+      "keySource": "参数源",
+      "keyName": "参数名",
       "matchType": "匹配类型",
       "equals": "精确匹配",
       "regex": "正则匹配",
       "expression": "表达式",
+    }
+  },
+  routerFilterConfig: {
+    name: "路由配置",
+    tips: "提示：当请求中存在对应值时将根据过滤类型在负载算法执行前过滤服务列表, 可用于针对请求特点负载至特定节点",
+    table: {
+      "scope": "作用范围",
+      "affectTarget": "应用名",
+      "createTime": "创建时间",
+      "modifyTime": "上次修改",
+      "serviceId": "服务",
+      "keySource": "参数源",
+      "keyName": "参数名",
+      "matchType": "匹配方式",
+      "equals": "精确匹配",
+      "regex": "正则匹配",
+      "expression": "表达式",
+      "filterType": "过滤类型",
+      "host": "主机名",
+      "metadata": "元数据",
+      "signatureKey": "服务参数名",
+      "serverInstanceSignature": "服务参数值",
+      "enable": "当前状态"
+    },
+    input: {
+      "keyword": "请输入关键字"
+    },
+    modal: {
+      "title": "编辑路由配置",
+      "scope": "作用范围",
+      "APPLICATION": "应用",
+      "INSTANCE": "实例",
+      "affectTarget": "应用名",
+      "serviceId": "服务名",
+      "keySource": "参数源",
+      "keyName": "参数名",
+      "matchType": "匹配类型",
+      "equals": "精确匹配",
+      "regex": "正则匹配",
+      "expression": "表达式",
+      "filterType": "过滤类型",
+      "host": "主机名",
+      "metadata": "元数据",
+      "signatureKey": "服务参数名",
+      "serverInstanceSignature": "服务参数值",
     }
   }
 }

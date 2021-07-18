@@ -68,5 +68,18 @@ export default new Router({
           import('@/views/routerConfig/index'),
       }]
     },
+    {
+      path: '/routerFilterConfig',
+      name: 'routerFilterConfig',
+      redirect: '/routerFilterConfig',
+      component: Layout,
+      icon: "bi-signpost-split",
+      children: [{
+        path: '/routerFilterConfig',
+        name: 'routerFilterConfig',
+        component: () =>
+          import('@/views/routerFilterConfig/index'),
+      }]
+    },
   ]
 })

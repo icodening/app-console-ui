@@ -1,13 +1,13 @@
 <template>
   <div>
     <form>
-      <div class="form-group">
-        <label for="scopeSelector">{{$t('routerConfig.modal.scope')}}</label>
-        <select name="scopeSelector" id="scopeSelector" class="form-control" v-model="entity.scope">
-          <option value="APPLICATION">{{$t('routerConfig.modal.APPLICATION')}}</option>
-          <option value="INSTANCE">{{$t('routerConfig.modal.INSTANCE')}}</option>
-        </select>
-      </div>
+<!--      <div class="form-group">-->
+<!--        <label for="scopeSelector">{{$t('routerConfig.modal.scope')}}</label>-->
+<!--        <select name="scopeSelector" id="scopeSelector" class="form-control" v-model="entity.scope">-->
+<!--          <option value="APPLICATION">{{$t('routerConfig.modal.APPLICATION')}}</option>-->
+<!--          <option value="INSTANCE">{{$t('routerConfig.modal.INSTANCE')}}</option>-->
+<!--        </select>-->
+<!--      </div>-->
       <div class="form-group">
         <label for="affectTarget">{{$t('routerConfig.modal.affectTarget')}}</label>
         <input type="text" class="form-control" id="affectTarget" :placeholder="$t('routerConfig.modal.affectTarget')"
