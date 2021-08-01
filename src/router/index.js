@@ -27,7 +27,13 @@ export default new Router({
         name: 'instanceLog',
         component: () =>
           import('@/views/instance/instanceLog'),
-      }]
+      },{
+        path: '/instance/:id/sqlMonitor',
+        name: 'instanceLog',
+        component: () =>
+          import('@/views/instance/instanceSqlMonitor.vue'),
+      }
+      ]
     },
     {
       path: '/ratelimit',
@@ -80,6 +86,6 @@ export default new Router({
         component: () =>
           import('@/views/routerFilterConfig/index'),
       }]
-    },
+    }
   ]
 })

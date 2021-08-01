@@ -5,6 +5,7 @@ module.exports = {
     "config": "动态配置",
     "routerConfig": "路由配置",
     "routerFilterConfig": "路由过滤",
+    "sqlMonitor": "SQL监控",
   },
   button: {
     "add": "新增",
@@ -48,7 +49,8 @@ module.exports = {
       "ip": "IP",
       "port": "端口",
       "pid": "进程号",
-      "viewLog": "查看日志"
+      "viewLog": "查看日志",
+      "sqlMonitor": "SQL监控",
     },
     input: {
       "keyword": "请输入应用名、实例标识、IP"
@@ -186,6 +188,19 @@ module.exports = {
       "metadata": "元数据",
       "signatureKey": "服务参数名",
       "serverInstanceSignature": "服务参数值",
+    }
+  },
+  sqlMonitor: {
+    name: "SQL监控",
+    input: {
+      "keyword": "请输入sql关键字"
+    },
+    table: {
+      "sql": "SQL语句",
+      "costTime": "耗时",
+      "jdbcUrl": "JDBC连接",
+      "parameters": "参数",
+      "explain": "explain",
     }
   }
 }

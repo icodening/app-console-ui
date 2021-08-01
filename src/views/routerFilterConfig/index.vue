@@ -31,7 +31,7 @@
       <table class="table table-hover table-bordered" style="table-layout: fixed">
         <thead>
         <tr>
-<!--          <th>{{$t('configurableScope.scope')}}</th>-->
+          <!--          <th>{{$t('configurableScope.scope')}}</th>-->
           <th>{{$t('routerFilterConfig.table.affectTarget')}}</th>
           <th>{{$t('routerFilterConfig.table.serviceId')}}</th>
           <th>{{$t('routerFilterConfig.table.keySource')}}</th>
@@ -40,31 +40,31 @@
           <th>{{$t('routerFilterConfig.table.expression')}}</th>
           <th>{{$t('routerFilterConfig.table.filterType')}}</th>
           <th>{{$t('routerFilterConfig.table.signatureKey')}}</th>
-          <th>{{$t('routerFilterConfig.table.serverInstanceSignature')}}</th>
+          <!--          <th>{{$t('routerFilterConfig.table.serverInstanceSignature')}}</th>-->
           <th>{{$t('routerFilterConfig.table.enable')}}</th>
-<!--          <th>{{$t('routerFilterConfig.table.createTime')}}</th>-->
+          <!--          <th>{{$t('routerFilterConfig.table.createTime')}}</th>-->
           <th>{{$t('routerFilterConfig.table.modifyTime')}}</th>
           <th>{{$t('table.option')}}</th>
         </tr>
         </thead>
         <tbody>
         <tr v-for="item in pageResult.list">
-<!--          <td>{{item.scope}}</td>-->
+          <!--          <td>{{item.scope}}</td>-->
           <td>{{item.affectTarget}}</td>
           <td>{{item.serviceId}}</td>
           <td>{{item.keySource}}</td>
           <td>{{item.keyName}}</td>
-          <td>{{$t('routerFilterConfig.table.'+item.matchType)}} </td>
+          <td>{{$t('routerFilterConfig.table.'+item.matchType)}}</td>
           <td>{{item.expression}}</td>
           <td>{{$t('routerFilterConfig.table.'+ item.filterType)}}</td>
-          <td>{{item.signatureKey===''? '*':item.signatureKey}}</td>
-          <td>{{item.serverInstanceSignature}}</td>
+          <td>{{item.signatureKey===''? '':item.signatureKey+'='}}{{item.serverInstanceSignature}}</td>
+          <!--          <td>{{item.serverInstanceSignature}}</td>-->
           <td>
             <span :class="{'text-success':item.enable,'text-danger':!item.enable}">
                    {{item.enable? $t('commons.enabled'):$t('commons.disabled')}}
            </span>
           </td>
-<!--          <td>{{item.createTime | dateFormat}}</td>-->
+          <!--          <td>{{item.createTime | dateFormat}}</td>-->
           <td>{{item.modifyTime | dateFormat}}</td>
           <td>
             <div class="btn-group btn-group-sm" role="group">

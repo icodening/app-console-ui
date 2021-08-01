@@ -42,6 +42,9 @@
               <router-link class="btn btn btn-outline-success" :to="'/instance/'+item.id+'/log'">
                 {{$t('applicationOverview.table.viewLog')}}
               </router-link>
+              <router-link class="btn btn btn-outline-success" :to="'/instance/'+item.id+'/sqlMonitor'">
+                {{$t('applicationOverview.table.sqlMonitor')}}
+              </router-link>
             </div>
           </td>
         </tr>
