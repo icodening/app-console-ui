@@ -2,21 +2,22 @@
   <div>
     <div
       class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-      <h1 class="h4">{{$t('log.title')}}</h1>
+      <h1 class="h4">{{$t('log.title')}} <span>{{instance.applicationName}}({{instance.ip}}:{{instance.port}}, pid={{instance.pid}})</span>
+      </h1>
     </div>
-    <form class="row col-3">
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text">{{$t('commons.keyword')}}</span>
-        </div>
-        <input type="text" class="form-control" :placeholder='$t("log.keyword")'
-               v-model="queryObject.keywords">
-        <div class="input-group-append">
-          <button class="btn btn-outline-primary" type="button">{{$t('commons.search')}}
-          </button>
-        </div>
-      </div>
-    </form>
+    <!--    <form class="row col-3">-->
+    <!--      <div class="input-group mb-3">-->
+    <!--        <div class="input-group-prepend">-->
+    <!--          <span class="input-group-text">{{$t('commons.keyword')}}</span>-->
+    <!--        </div>-->
+    <!--        <input type="text" class="form-control" :placeholder='$t("log.keyword")'-->
+    <!--               v-model="queryObject.keywords">-->
+    <!--        <div class="input-group-append">-->
+    <!--          <button class="btn btn-outline-primary" type="button">{{$t('commons.search')}}-->
+    <!--          </button>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </form>-->
     <div class="card text-white bg-dark" style="overflow-y: auto;" id="logarea">
       <div class="card-body" style="padding-top: 0">
         <p v-html="log" class="log-content"></p>
@@ -42,6 +43,11 @@
         log: "",
         pageResult: {
           list: []
+        },
+        instance: {
+          applicationName: "",
+          ip: "",
+          port: "",
         }
       }
     },
@@ -85,6 +91,14 @@
       ws.onerror = function (err) {
         console.debug(err)
       }
+      console.log(that.$route.params.instance);
+      if (that.$route.params.instance) {
+        localStorage.setItem("instance-log", JSON.stringify(that.$route.params.instance));
+        that.instance = that.$route.params.instance;
+      } else {
+        that.instance = JSON.parse(localStorage.getItem("instance-log"));
+      }
+
     },
     methods: {}
   }

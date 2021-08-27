@@ -22,11 +22,11 @@
       <table class="table table-hover table-bordered" style="table-layout: fixed">
         <thead>
         <tr>
-          <th style="width: 50%">{{$t('sqlMonitor.table.sql')}}</th>
-          <th style="width: 10%">{{$t('sqlMonitor.table.parameters')}}</th>
-          <th style="width: 5%">{{$t('sqlMonitor.table.costTime')}}</th>
-          <th style="width: 25%">{{$t('sqlMonitor.table.jdbcUrl')}}</th>
-          <th style="width: 10%">{{$t('table.option')}}</th>
+          <th style="width: 70%">{{$t('sqlMonitor.table.sql')}}</th>
+          <th style="width: 15%">{{$t('sqlMonitor.table.parameters')}}</th>
+          <th style="width: 15%">{{$t('sqlMonitor.table.costTime')}}</th>
+<!--          <th style="width: 25%">{{$t('sqlMonitor.table.jdbcUrl')}}</th>-->
+<!--          <th style="width: 10%">{{$t('table.option')}}</th>-->
         </tr>
         </thead>
         <tbody>
@@ -35,11 +35,11 @@
           <td><small class="text-muted">{{item.parameters}}</small></td>
           <td><small class="text-muted">{{item.costTime}} ms</small></td>
           <td style="white-space: nowrap;word-break: keep-all;overflow: hidden"><small class="text-muted">{{item.jdbcUrl}}</small></td>
-          <td>
-            <button class="btn btn btn-outline-success btn-sm">
-             {{$t('sqlMonitor.table.explain')}}
-            </button>
-          </td>
+<!--          <td>-->
+<!--            <button class="btn btn btn-outline-success btn-sm">-->
+<!--             {{$t('sqlMonitor.table.explain')}}-->
+<!--            </button>-->
+<!--          </td>-->
         </tr>
         </tbody>
       </table>

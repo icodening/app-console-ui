@@ -39,9 +39,14 @@
           <td>{{item.pid}}</td>
           <td>
             <div class="btn-group btn-group-sm" role="group">
-              <router-link class="btn btn btn-outline-success" :to="'/instance/'+item.id+'/log'">
+              <router-link class="btn btn btn-outline-success"
+                           :to="{name:'instanceLog', params:{instance: item, id:item.id}, path:'/instance/:id/log'}">
                 {{$t('applicationOverview.table.viewLog')}}
               </router-link>
+              <!--              <router-link class="btn btn btn-outline-success" :to="{params:{instance:1}, path:'/instance/'+item.id+'/log'}">-->
+              <!--                {{$t('applicationOverview.table.viewLog')}}-->
+              <!--              </router-link>-->
+
               <router-link class="btn btn btn-outline-success" :to="'/instance/'+item.id+'/sqlMonitor'">
                 {{$t('applicationOverview.table.sqlMonitor')}}
               </router-link>
